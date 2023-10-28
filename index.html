@@ -3,110 +3,161 @@
   <head>
     <style>
         body {
-            max-width: 500px;
+           padding-left: 80px;
+           padding-right: 90px;
           margin: auto;
         background-color: rgb(104, 152, 150);
+        font-size: 40px;
         }
       table {
         border-collapse: collapse;
       }
-
+      select {
+            font-size: 50px;
+      }
       table,
       th,
       td {
         border: 1px solid black;
         padding: 5px;
+        
       }
 
       .correct {
         color: green;
-        font-size: 60px;
+        
       }
 
       .wrong {
         color: red;
-        font-size: 40px;
+       
       }
     </style>
   </head>
   <body>
-    <h1>Learn Arabic by Practice</h1>
-    <h2>
+    <h4>Learn Arabic by Practice</h4>
+    <div>
       When you clik Check Answer button, Your correct Selection will highlight in <strong style="color:green;">green</strong>
       and Wrong selection will display in <strong style="color:red;">red color </strong> 
-    </h2>
-
+    </div>
+    <br/>
     <!-- first word -->
     <table>
         <!--header-->
       <tr>
-        <th>Command </th>
-        <th>Present Tense</th>
-        <th>Past Tense</th>
-        <th>root Word amere</th>
+        <th>Command الأَمْر </th>
+        <th>Present Tense الْمُضَارِع</th>
+        <th>Past Tense الْمَاضِي</th>
+        <th>root Word = شَرِبَ</th>
       </tr>
       <!--Ana-->
       <tr>
+        <!--for command-->
         <td>
           <select data-correct="--">
             <option value="select">Select</option>
-            <option value="gone">goes</option>
-            <option value="went">went</option>
+            <option value="شَرِبْتُ">شَرِبْتُ</option>
+            <option value="شَرِبْنَا">شَرِبْنَا</option>
+            
+            
+            <option value="اِشْرَبْ">اِشْرَبْ</option>
+            <option value="اِشْرَبِي">اِشْرَبِي</option>
             <option value="--"> -- </option>
             <!-- will add more option when update to arabic words-->
           </select>
         </td>
-
+         <!--for present-->
         <td>
-          <select data-correct="goes">
+          <select data-correct="أَشْرَبُ">
             <option value="select">Select</option>
-            <option value="went">went</option>
-            <option value="goes">goes</option>
+            <option value="شَرِبْتُ">شَرِبْتُ</option>
+            <option value="شَرِبْنَا">شَرِبْنَا</option>
+            <option value="أَشْرَبُ">أَشْرَبُ</option>
+            <option value="نَشْرَبُ">نَشْرَبُ</option>
+            
+            <option value="اِشْرَبْ">اِشْرَبْ</option>
+            <option value="اِشْرَبِي">اِشْرَبِي</option>
+
+            <option value="شَرِبْتَ">شَرِبْتَ</option>
+            <option value="تَشْرَبُ">تَشْرَبُ</option>
             <option value="--"> -- </option>
           </select>
         </td>
+        <!--coreect for past-->
         <td>
-          <select data-correct="went">
+          <select data-correct="شَرِبْتُ">
             <option value="select">Select</option>
-            <option value="went">went</option>
-            <option value="goes">goes</option>
+            <option value="شَرِبْتُ">شَرِبْتُ</option>
+            <option value="شَرِبْنَا">شَرِبْنَا</option>
+            <option value="أَشْرَبُ">أَشْرَبُ</option>
+            <option value="نَشْرَبُ">نَشْرَبُ</option>
+            
+            <option value="اِشْرَبْ">اِشْرَبْ</option>
+            <option value="اِشْرَبِي">اِشْرَبِي</option>
+
+            <option value="شَرِبْتَ">شَرِبْتَ</option>
+            <option value="تَشْرَبُ">تَشْرَبُ</option>
             <option value="--"> -- </option>
           </select>
         </td>
 
-        <td>I </td>
+        <td>I أَنَا </td>
       </tr>
       <!--we -->
 
       <tr>
         <td>
-            <select data-correct="--">
-              <option value="select">Select</option>
-              <option value="gone">goes</option>
-              <option value="went">went</option>
-              <option value="--"> -- </option>
-            </select>
+          <select data-correct="--">
+            <option value="select">Select</option>
+            <option value="شَرِبْتُ">شَرِبْتُ</option>
+            <option value="شَرِبْنَا">شَرِبْنَا</option>
+            
+            
+            <option value="اِشْرَبْ">اِشْرَبْ</option>
+            <option value="اِشْرَبِي">اِشْرَبِي</option>
+            <option value="--"> -- </option>
+            <!-- will add more option when update to arabic words-->
+          </select>
           </td>
   
-          <td>
-            <select data-correct="goes">
-              <option value="select">Select</option>
-              <option value="went">went</option>
-              <option value="goes">goes</option>
-              <option value="--"> -- </option>
-            </select>
-          </td>
-          <td>
-            <select data-correct="went">
-              <option value="select">Select</option>
-              <option value="went">went</option>
-              <option value="goes">goes</option>
-              <option value="--"> -- </option>
-            </select>
-          </td>
-        <td>We</d>
+          <!--for present-->
+        <td>
+          <select data-correct="نَشْرَبُ">
+            <option value="select">Select</option>
+            <option value="شَرِبْتُ">شَرِبْتُ</option>
+            <option value="شَرِبْنَا">شَرِبْنَا</option>
+            <option value="أَشْرَبُ">أَشْرَبُ</option>
+            <option value="نَشْرَبُ">نَشْرَبُ</option>
+            
+            <option value="اِشْرَبْ">اِشْرَبْ</option>
+            <option value="اِشْرَبِي">اِشْرَبِي</option>
+
+            <option value="شَرِبْتَ">شَرِبْتَ</option>
+            <option value="تَشْرَبُ">تَشْرَبُ</option>
+            <option value="--"> -- </option>
+          </select>
+        </td>
+          <!--coreect for past-->
+        <td>
+          <select data-correct="شَرِبْنَا">
+            <option value="select">Select</option>
+            <option value="شَرِبْتُ">شَرِبْتُ</option>
+            <option value="شَرِبْنَا">شَرِبْنَا</option>
+            <option value="أَشْرَبُ">أَشْرَبُ</option>
+            <option value="نَشْرَبُ">نَشْرَبُ</option>
+            
+            <option value="اِشْرَبْ">اِشْرَبْ</option>
+            <option value="اِشْرَبِي">اِشْرَبِي</option>
+
+            <option value="شَرِبْتَ">شَرِبْتَ</option>
+            <option value="تَشْرَبُ">تَشْرَبُ</option>
+            <option value="--"> -- </option>
+          </select>
+        </td>
+        <td>We نَحْنُ</d>
       </tr>
       <!--you-->
+
     </table> 
 
     <button class="checkButton" style="border:2px solid; background-color: rgb(137, 201, 76); font-size: 30px;">Check Answer</button>
