@@ -6,6 +6,14 @@ body {
   background-color: rgb(240, 241, 245);
   font-size: 40px;
 }
+h2 {
+    text-decoration: underline; 
+    -webkit-text-stroke: 5px; 
+    text-align: center;
+}
+h1 {
+    text-align: center;
+}
 
 table {
   border-collapse: collapse;
@@ -48,8 +56,33 @@ tr:nth-child(2) {
   }
 
   tr:nth-child(n+5):nth-child(-n+9)  {
-    background-color: #5ee467;
+    background-color: #939b6c;
   }
   tr:nth-child(n+10):nth-child(-n+15)  {
-    background-color: #2e59da;
+    background-color: #3f5cbb;
   }
+
+
+  .fixed-header {
+    
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: rgb(16, 119, 78);
+    padding: 8px 50px;
+    width: 85%;
+  }
+
+  .checkButton{
+    border: 3px solid;
+    border-radius: 30px;
+    background-color: rgb(137, 201, 76);
+    font-size: 30px;
+   
+  }
+    hr {
+        border-top: 10px solid rgb(14, 31, 188);
+        margin-top: 80px;
+        width: 100%; 
+    }   
