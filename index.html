@@ -1,555 +1,919 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <style>
-        body {
-           padding-left: 80px;
-           padding-right: 90px;
-          margin: auto;
-        background-color: rgb(240, 241, 245);
-        font-size: 40px;
-        }
-      table {
-        border-collapse: collapse;
-      }
-      select {
-            font-size: 50px;
-      }
-      table,
-      th,
-      td {
-        border: 1px solid black;
-        padding: 5px;
-        
-      }
 
-      .correct {
-        color: green;
-        
-      }
+<head>
+  <link href="styles.css" rel="stylesheet" />
+</head>
 
-      .wrong {
-        color: red;
-       
-      }
-      
-
-      #tb{
-       
-  width: 15rem;
-   height: 2rem;
-   text-align: center;
-   font-size: 30px;
-   border: none;
-}
-    </style>
-  </head>
-  <body>
-    <heder>
-      
-      <table style="border: none;">
-         <tr>
-          
-            <th id="tb"><a href="#home">Home</a> </th>
-            <th id="tb"><a href="https://www.youtube.com/@QuranicLinguistics/featured">Learn on youtube</a></th>
-            <th id="tb"><a href="https://github.com/ibrahimendire">Follow Me</a></th>
-         </tr>
-      </table>
-   </heder>
-
-    <h2 style="text-align: center;">Learn Arabic by Practice</h2>
-    <div style="text-align: center;">
-      When you clik Check Answer button, Your correct Selection will highlight in <strong style="color:green;">green</strong>
-      and Wrong selection will display in <strong style="color:red;">red color </strong> 
-    </div>
-    <br/>
-    <!-- first word -->
-    <table style="text-align: center;">
-        <!--header-->
-        <tr>
-          <td colspan = "2">
-          <th>شَرِبَ يَشْرَبُ اِشْرَبْ</th> 
-        </tr>
+<body>
+  <heder>
+    <table style="border: none">
       <tr>
-        <th>فِعْلُ الْأمْرِ  </th>
-        <th>الْفِعْلُ الْمُضَارِع</th>
-        <th>الْفِعْلُ الْمَاضِي </th>
-        <th>الضَّميرُ الْمُنْفَصِل</th>
+        <th id="tb"><a href="#home">Home</a></th>
+        <th id="tb">
+          <a href="https://www.youtube.com/@QuranicLinguistics/featured">Learn on youtube</a>
+        </th>
+        <th id="tb">
+          <a href="https://github.com/ibrahimendire">Follow Me</a>
+        </th>
       </tr>
-      <!--Ana-->
-      <tr>
-        <!--for command-->
-        <td>
-          <select data-correct="--">
-            <option value="select">Select</option>
-            <option value="شَرِبْتُ">شَرِبْتُ</option>
-            <option value="شَرِبْنَا">شَرِبْنَا</option>
-            
-            
-            <option value="اِشْرَبْ">اِشْرَبْ</option>
-            <option value="اِشْرَبِي">اِشْرَبِي</option>
-            <option value="--"> -- </option>
-            <!-- will add more option when update to arabic words-->
-          </select>
-        </td>
-         <!--for present-->
-        <td>
-          <select data-correct="أَشْرَبُ">
-            <option value="select">Select</option>
-            <option value="أَشْرَبُ">أَشْرَبُ</option>
-            <option value="نَشْرَبُ">نَشْرَبُ</option>
-            <option value="--"> -- </option>
-          </select>
-        </td>
-        <!--coreect for past-->
-        <td>
-          <select data-correct="شَرِبْتُ">
-            <option value="select">Select</option>
-            <option value="شَرِبْتُ">شَرِبْتُ</option>
-            <option value="شَرِبْنَا">شَرِبْنَا</option>
-            <option value="أَشْرَبُ">أَشْرَبُ</option>
-            <option value="نَشْرَبُ">نَشْرَبُ</option>
-            
-            <option value="اِشْرَبْ">اِشْرَبْ</option>
-            <option value="--"> -- </option>
-          </select>
-        </td>
+    </table>
+  </heder>
 
-        <td> أَنَا </td>
-      </tr>
-      <!--we -->
-
-      <tr>
-        <td>
-          <select data-correct="--">
-            <option value="select">Select</option>
-            <option value="شَرِبْتُ">شَرِبْتُ</option>
-            <option value="شَرِبْنَا">شَرِبْنَا</option>
-            
-            
-            <option value="اِشْرَبْ">اِشْرَبْ</option>
-            <option value="اِشْرَبِي">اِشْرَبِي</option>
-            <option value="--"> -- </option>
-            
-          </select>
-          </td>
-  
-          <!--for present-->
-        <td>
-          <select data-correct="نَشْرَبُ">
-            <option value="select">Select</option>
-            <option value="شَرِبْنَا">شَرِبْنَا</option>
-            <option value="أَشْرَبُ">أَشْرَبُ</option>
-            <option value="نَشْرَبُ">نَشْرَبُ</option>          
-            <option value="اِشْرَبْ">اِشْرَبْ</option>
-            <option value="تَشْرَبُ">تَشْرَبُ</option>
-            <option value="--"> -- </option>
-          </select>
-        </td>
-          <!--coreect for past-->
-        <td>
-          <select data-correct="شَرِبْنَا">
-            <option value="select">Select</option>
-            <option value="شَرِبْتُ">شَرِبْتُ</option>
-            <option value="شَرِبْنَا">شَرِبْنَا</option>
-            <option value="أَشْرَبُ">أَشْرَبُ</option>
-            <option value="نَشْرَبُ">نَشْرَبُ</option>
-            
-            <option value="اِشْرَبْ">اِشْرَبْ</option>
-            
-            <option value="--"> -- </option>
-          </select>
-        </td>
-        <td> نَحْنُ</td>
-      </tr>
-      <!--you mascular-->
-      <tr>
-        <td>
-           <select></select>
-        </td>
-        <td>
-          <select></select>
-       </td>
-       <td>
-        <select></select>
-     </td>
-        <td>أَنْتَ</td>
-      </tr>
-<!-- you F-->
-<tr>
-  <td>
-     <select></select>
-  </td>
-  <td>
-    <select></select>
- </td>
- <td>
-  <select></select>
-</td>
-  <td>أَنْتِ</td>
-</tr>
-<!--you 2M/2F-->
-<tr>
-  <td>
-     <select></select>
-  </td>
-  <td>
-    <select></select>
- </td>
- <td>
-  <select></select>
-</td>
-  <td>أََنْتُمَا</td>
-</tr>
-<!--you all M-->
-<tr>
-  <td>
-     <select></select>
-  </td>
-  <td>
-    <select></select>
- </td>
- <td>
-  <select></select>
-</td>
-  <td>أَنْتُمْ</td>
-</tr>
-<!--you all F-->
-<tr>
-  <td>
-     <select></select>
-  </td>
-  <td>
-    <select></select>
- </td>
- <td>
-  <select></select>
-</td>
-  <td>أَنْتُنَّ</td>
-</tr>
-<!--3rd person-->
-<!--he-->
-<tr>
-  <td>
-     <select></select>
-  </td>
-  <td>
-    <select></select>
- </td>
- <td>
-  <select></select>
-</td>
-  <td>هُوَ</td>
-</tr>
-<!--She-->
-<tr>
-  <td>
-     <select></select>
-  </td>
-  <td>
-    <select></select>
- </td>
- <td>
-  <select></select>
-</td>
-  <td>هِيَ</td>
-</tr>
-<!--they 2M-->
-<tr>
-  <td>
-     <select></select>
-  </td>
-  <td>
-    <select></select>
- </td>
- <td>
-  <select></select>
-</td>
-  <td>2M<br/> هُمَا </td>
-</tr>
-<!--they 2F-->
-<tr>
-  <td>
-     <select></select>
-  </td>
-  <td>
-    <select></select>
- </td>
- <td>
-  <select></select>
-</td>
-  <td>2F<br/>  هُمَا</td>
-</tr>
-<!--They 3+ M-->
-<tr>
-  <td>
-     <select></select>
-  </td>
-  <td>
-    <select></select>
- </td>
- <td>
-  <select></select>
-</td>
-  <td>هُمْ</td>
-</tr>
-<!--They 3+ F-->
-<tr>
-  <td>
-     <select></select>
-  </td>
-  <td>
-    <select></select>
- </td>
- <td>
-  <select></select>
-</td>
-  <td>هُنَّ</td>
-</tr>
-    </table> 
-
-    <button class="checkButton" style="border:2px solid; background-color: rgb(137, 201, 76); font-size: 30px;">Check Answer</button>
-    <br /><br />
-<!-- second word the whole an other table -->
-<!--===============================================================================================-->
-
-<table>
-  <!--header-->
-  <tr>
-    <td colspan = "2">
-    <th>كَتَبَ يَكْتَبُ أُكْتُبْ</th>
-  </tr>
-<tr>
-  <th>فِعْلُ الْأمْرِ  </th>
-  <th>الْفِعْلُ الْمُضَارِع</th>
-  <th>الْفِعْلُ الْمَاضِي </th>
-  <th>الضَّميرُ الْمُنْفَصِل</th>
-</tr>
-<!--Ana-->
-<tr>
-  <!--for command-->
-  <td>
-    <select data-correct="">
-      <option value="select">Select</option>
- 
-    </select>
-  </td>
-   <!--for present-->
-  <td>
-    <select data-correct="">
-      <option value="select">Select</option>
+  <h2 style="text-decoration: underline; -webkit-text-stroke: 5px; text-align: center;">Learn Arabic by Practice</h2>
+  <div style="text-align: center">
+    When you clik Check Answer button, Your correct Selection will highlight
+    in <strong style="color: green">green</strong> and Wrong selection will
+    display in <strong style="color: red">red color </strong>
+  </div>
+  <br />
+  <!-- first word -->
+  <h1 style="font-style: italic;text-decoration: underline; -webkit-text-stroke: .2cm;"> Table One:</h1>
+  <table style="text-align: center" >
+    <!--header-->
+    <tr>
       
-    </select>
-  </td>
-  <!--coreect for past-->
-  <td>
-    <select data-correct="">
-      <option value="select">Select</option>
+      <th colspan="4" >شَرِبَ يَشْرَبُ اِشْرَبْ</th>
+    </tr>
+    <tr>
+
+      <th>فِعْلُ الْأمْرِ</th>
+      <th>الْفِعْلُ الْمُضَارِع</th>
+      <th>الْفِعْلُ الْمَاضِي</th>
+      <th>الضَّميرُ الْمُنْفَصِل</th>
+    </tr>
+    <!--**************************************************************************************************-->
+    <!--Ana-->
+    <tr >     
+      <!--for command-->
+      <td>
+        <select data-correct="--">
+          <option value="select">Select</option>
+          <option value="شَرِبْتُ">شَرِبْتُ</option>
+          <option value="شَرِبْنَا">شَرِبْنَا</option>
+          <option value="--">--</option>
+        </select>
+      </td>
+      <!--for present-->
+      <td>
+        <select data-correct="أَشْرَبُ">
+          <option value="select">Select</option>
+          <option value="أَشْرَبُ">أَشْرَبُ</option>
+          <option value="نَشْرَبُ">نَشْرَبُ</option>
+          <option value="--">--</option>
+        </select>
+      </td>
+      <!-- for past-->
+      <td>
+        <select data-correct="شَرِبْتُ">
+          <option value="select">Select</option>
+          <option value="شَرِبْتُ">شَرِبْتُ</option>
+          <option value="شَرِبْنَا">شَرِبْنَا</option>
+          <option value="أَشْرَبُ">أَشْرَبُ</option>
+          <option value="--">--</option>
+        </select>
+      </td>
+
+      <td>أَنَا</td>
+    </tr>
+    <!--**************************************************************************************************-->
+    <!--we -->
+
+    <tr>
+
+      <!--for command-->
+      <td>
+        <select data-correct="--">
+          <option value="select">Select</option>
+          <option value="شَرِبْتُ">شَرِبْتُ</option>
+          <option value="شَرِبْنَا">شَرِبْنَا</option>
+          <option value="اِشْرَبْ">اِشْرَبْ</option>
+          <option value="--">--</option>
+        </select>
+      </td>
+
+      <!--for present-->
+      <td>
+        <select data-correct="نَشْرَبُ">
+          <option value="select">Select</option>
+          <option value="شَرِبْنَا">شَرِبْنَا</option>
+          <option value="أَشْرَبُ">أَشْرَبُ</option>
+          <option value="نَشْرَبُ">نَشْرَبُ</option>
+          <option value="اِشْرَبْ">اِشْرَبْ</option>
+        </select>
+      </td>
+      <!-- for past-->
+      <td>
+        <select data-correct="شَرِبْنَا">
+          <option value="select">Select</option>
+          <option value="شَرِبْتُ">شَرِبْتُ</option>
+          <option value="شَرِبْنَا">شَرِبْنَا</option>
+          <option value="نَشْرَبُ">نَشْرَبُ</option>
+          <option value="اِشْرَبْ">اِشْرَبْ</option>
+        </select>
+      </td>
+      <td>نَحْنُ</td>
+    </tr>
+    <!--**************************************************************************************************-->
+    <!--you mascular-->
+    <tr>
+
+      <!--for command-->
+      <td>
+        <select data-correct="اِشْرَبْ">
+          <option value="select">Select</option>
+          <option value="شَرِبْتَ">شَرِبْتَ</option>
+          <option value="اِشْرَبْ">اِشْرَبْ</option>
+          <option value="يَشْرَبُ">يَشْرَبُ</option>
+          <option value="تَشْرَبُ">تَشْرَبُ</option>
+
+        </select>
+      </td>
+
+      <!--for present-->
+      <td>
+        <select data-correct="تَشْرَبُ">
+          <option value="select">Select</option>
+          <option value="شَرِبْتَ">شَرِبْتَ</option>
+          <option value="اِشْرَبْ">اِشْرَبْ</option>
+          <option value="يَشْرَبُ">يَشْرَبُ</option>
+          <option value="تَشْرَبُ">تَشْرَبُ</option>
+        </select>
+      </td>
+      <!-- for past-->
+      <td>
+        <select data-correct="شَرِبْتَ">
+          <option value="select">Select</option>
+          <option value="شَرِبْتَ">شَرِبْتَ</option>
+          <option value="اِشْرَبْ">اِشْرَبْ</option>
+          <option value="يَشْرَبُ">يَشْرَبُ</option>
+          <option value="تَشْرَبُ">تَشْرَبُ</option>
+        </select>
+      </td>
+      <td>أَنْتَ</td>
+    </tr>
+    <!--**************************************************************************************************-->
+    <!--you F-->
+    <tr>
+
+      <!--for command-->
+      <td>
+        <select data-correct="اِشْرَبِي">
+          <option value="select">Select</option>          
+          <option value="اِشْرَبِي">اِشْرَبِي</option>
+          <option value="اِشْرَبِ">اِشْرَبِ</option>
+          <option value="اِشْرَبْ">اِشْرَبْ</option>
+          <option value="اِشْرَبُوا">اِشْرَبُوا</option>
+
+        </select>
+      </td>
+
+      <!--for present-->
+      <td>
+        <select data-correct="تَشْرَبِينَ">
+          <option value="select">Select</option>
+          <option value="شَرِبْتِ">شَرِبْتِ</option>
+          <option value="اِشْرَبِي">اِشْرَبِي</option>
+          <option value="يَشْرَبِ">يَشْرَبِ</option>
+          <option value="تَشْرَبِينَ">تَشْرَبِينَ</option>
+        </select>
+      </td>
+      <!-- for past-->
+      <td>
+        <select data-correct="شَرِبْتِ">
+          <option value="select">Select</option>
+          <option value="شَرِبْتِ">شَرِبْتِ</option>
+          <option value="اِشْرَبِي">اِشْرَبِي</option>
+          <option value="يَشْرَبِ">يَشْرَبِ</option>
+          <option value="تَشْرَبِينَ">تَشْرَبِينَ</option>
+        </select>
+      </td>
+      <td>أَنْتِ</td>
+    </tr>
+    <!--**************************************************************************************************-->
+    <!-- you 2M/2F-->
+    <tr>
+
+      <!--for command-->
+      <td>
+        <select data-correct="اِشْرَبَا">
+          <option value="select">Select</option>
+          <option value="اِشْرَبَا">اِشْرَبَا</option>
+          <option value="اِشْرَبْ">اِشْرَبْ</option>
+          <option value="اِشْرَبُوا">اِشْرَبُوا</option>
+          <option value="اِشْرَبْنَ">اِشْرَبْنَ</option>
+
+        </select>
+      </td>
+
+      <!--for present-->
+      <td>
+        <select data-correct="تَشْرَبَانِ">
+          <option value="select">Select</option>
+          <option value="شَرِبْتُنَ">شَرِبْتُنَ</option>
+          <option value="تَشْرَبَانِ">تَشْرَبَانِ</option>
+          <option value="يَشْرَبِ">يَشْرَبِ</option>
+          <option value="تَشْرَبِينَ">تَشْرَبِينَ</option>
+        </select>
+      </td>
+      <!-- for past-->
+      <td>
+        <select data-correct="شَرِبْتُمَا">
+          <option value="select">Select</option>
+          <option value="تَشْرَبَانِ">تَشْرَبَانِ</option>
+          <option value="يَشْرَبَانِ">يَشْرَبَانِ</option>
+          <option value="تَشْرَبُ">تَشْرَبُ</option>
+          <option value="شَرِبْتُمَا">شَرِبْتُمَا</option>
+
+        </select>
+      </td>
+      <td>أََنْتُمَا</td>
+    </tr>
+    <!--**************************************************************************************************-->
+    <!--you all M-->
+    <tr>
+
+      <!--for command-->
+      <td>
+        <select data-correct="اِشْرَبُوا">
+          <option value="select">Select</option>
+          <option value="اِشْرَبْ">اِشْرَبْ</option>
+          <option value="اِشْرَبْنَ">اِشْرَبْنَ</option>
+          <option value="اِشْرَبُوا">اِشْرَبُوا</option>
+          <option value="اِشْرَبَا">اِشْرَبَا</option>
+        </select>
+      </td>
+
+      <!--for present-->
+      <td>
+        <select data-correct="تَشْرَبُونَ">
+          <option value="select">Select</option>
+          <option value="يَشْرَبُونَ">يَشْرَبُونَ</option>
+          <option value="تَشْرَبُونَ">تَشْرَبُونَ</option>
+          <option value="أَشْرَبُ">أَشْرَبُ</option>
+          <option value="تَشْرَبُ">تَشْرَبُ</option>
+        </select>
+      </td>
+      <!-- for past-->
+      <td>
+        <select data-correct="شَرِبْتُمْ">
+          <option value="select">Select</option>
+          <option value="شَرِبْتُ">شَرِبْتُ</option>
+          <option value="شَرِبْتُمْ">شَرِبْتُمْ</option>
+          <option value="شَرِبْتُنَ">شَرِبْتُنَ</option>
+          <option value="شَرِبْتُمَا">شَرِبْتُمَا</option>
+        </select>
+      </td>
+      <td>أَنْتُمْ</td>
+    </tr>
+    <!--**************************************************************************************************-->
+    <!--you all F-->
+    <tr>
+
+      <!--for command-->
+      <td>
+        <select data-correct="اِشْرَبْنَ">
+          <option value="select">Select</option>
+          <option value="اِشْرَبُوا">اِشْرَبُوا</option>
+          <option value="اِشْرَبْ">اِشْرَبْ</option>
+          <option value="اِشْرَبِ">اِشْرَبِ</option>
+          <option value="اِشْرَبْنَ">اِشْرَبْنَ</option>
+
+        </select>
+      </td>
+
+      <!--for present-->
+      <td>
+        <select data-correct="تَشْرَبْنَ">
+          <option value="select">Select</option>
+          <option value="يَشْرَبْنَ">يَشْرَبْنَ</option>
+          <option value="تَشْرَبْنَ">تَشْرَبْنَ</option>
+          <option value="تَشْرَبُ">تَشْرَبُ</option>
+          <option value="تَشْرَبَانِ">تَشْرَبَانِ</option>
+
+        </select>
+      </td>
+      <!-- for past-->
+      <td>
+        <select data-correct="شَرِبْتُنَّ">
+          <option value="select">Select</option>
+          <option value="شَرِبْتُنَّ">شَرِبْتُنَّ</option>
+          <option value="شَرِبَتْ">شَرِبَتْ</option>
+          <option value="شَرِبْنَ">شَرِبْنَ</option>
+          <option value="شَرِبَ">شَرِبَ</option>
+        </select>
+      </td>
+      <td>أَنْتُنَّ</td>
+    </tr>
+    <!--**************************************************************************************************-->
+    <!--3rd person-->
+    <!--he-->
+    <tr>
+
+      <!--for command-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+
+      <!--for present-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+      <!-- for past-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+          <option value=""></option>
+        </select>
+      </td>
+      <td>هُوَ</td>
+    </tr>
+    <!--**************************************************************************************************-->
+    <!--She-->
+    <tr>
+
+      <!--for command-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+
+      <!--for present-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+      <!-- for past-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+          <option value=""></option>
+        </select>
+      </td>
+      <td>هِيَ</td>
+    </tr>
+    <!--**************************************************************************************************-->
+    <!--they 2M-->
+    <tr>
+
+      <!--for command-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+
+      <!--for present-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+      <!-- for past-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+          <option value=""></option>
+        </select>
+      </td>
+      <td>
+        2M<br />
+        هُمَا
+      </td>
+    </tr>
+    <!--**************************************************************************************************-->
+    <!--they 2F-->
+    <tr>
+
+      <!--for command-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+
+      <!--for present-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+      <!-- for past-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+          <option value=""></option>
+        </select>
+      </td>
+      <td>
+        2F<br />
+        هُمَا
+      </td>
+    </tr>
+    <!--**************************************************************************************************-->
+    <!--They 3+ M-->
+    <tr>
+
+      <!--for command-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+
+      <!--for present-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+      <!-- for past-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+          <option value=""></option>
+        </select>
+      </td>
+      <td>هُمْ</td>
+    </tr>
+    <!--**************************************************************************************************-->
+    <!--They 3+ F-->
+    <tr>
+
+      <!--for command-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+
+      <!--for present-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+      <!-- for past-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+          <option value=""></option>
+        </select>
+      </td>
+      <td>هُنَّ</td>
+    </tr>
+  </table>
+
+  <button class="checkButton" style="
+        border: 2px solid;
+        background-color: rgb(137, 201, 76);
+        font-size: 30px;
+      ">
+    Check Answer
+  </button>
+  <br /><br />
+  <!-- second word the whole an other table -->
+  <!--===============================================================================================-->
+  <h1 style="font-style: italic;text-decoration: underline; -webkit-text-stroke: .2cm;"> Table Two:</h1>
+  <table>
+    <!--header-->
+    <tr>
       
-    </select>
-  </td>
+      <th colspan="4" >كَتَبَ يَكْتَبُ أُكْتُبْ</th>
+    </tr>
+    <tr>
+      <th>فِعْلُ الْأمْرِ</th>
+      <th>الْفِعْلُ الْمُضَارِع</th>
+      <th>الْفِعْلُ الْمَاضِي</th>
+      <th>الضَّميرُ الْمُنْفَصِل</th>
+    </tr>
+    <!--Ana-->
+    <tr>
 
-  <td> أَنَا </td>
-</tr>
-<!--we -->
+      </td>
+      <!--for command-->
+      <td>
+        <select data-correct="--">
+          <option value="select">Select</option>
 
-<tr>
-  <td>
-    <select data-correct="">
-      <option value="select">Select</option>
-      
-    </select>
-    </td>
+          <option value="--">--</option>
+        </select>
+      </td>
+      <!--for present-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+          <option value="--">--</option>
+        </select>
+      </td>
+      <!-- for past-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+          <option value="--">--</option>
+        </select>
+      </td>
 
-    <!--for present-->
-  <td>
-    <select data-correct="">
-      <option value="select">Select</option>
-    </select>
-  </td>
-    <!--coreect for past-->
-  <td>
-    <select data-correct="">
-      <option value="select">Select</option>
-      
-    </select>
-  </td>
-  <td> نَحْنُ</td>
-</tr>
-<!--you mascular-->
-<tr>
-  <td>
-     <select></select>
-  </td>
-  <td>
-    <select></select>
- </td>
- <td>
-  <select></select>
-</td>
-  <td>أَنْتَ</td>
-</tr>
-<!-- you F-->
-<tr>
-<td>
-<select></select>
-</td>
-<td>
-<select></select>
-</td>
-<td>
-<select></select>
-</td>
-<td>أَنْتِ</td>
-</tr>
-<!--you 2M/2F-->
-<tr>
-<td>
-<select></select>
-</td>
-<td>
-<select></select>
-</td>
-<td>
-<select></select>
-</td>
-<td>أََنْتُمَا</td>
-</tr>
-<!--you all M-->
-<tr>
-<td>
-<select></select>
-</td>
-<td>
-<select></select>
-</td>
-<td>
-<select></select>
-</td>
-<td>أَنْتُمْ</td>
-</tr>
-<!--you all F-->
-<tr>
-<td>
-<select></select>
-</td>
-<td>
-<select></select>
-</td>
-<td>
-<select></select>
-</td>
-<td>أَنْتُنَّ</td>
-</tr>
-<!--3rd person-->
-<!--he-->
-<tr>
-<td>
-<select></select>
-</td>
-<td>
-<select></select>
-</td>
-<td>
-<select></select>
-</td>
-<td>هُوَ</td>
-</tr>
-<!--She-->
-<tr>
-<td>
-<select></select>
-</td>
-<td>
-<select></select>
-</td>
-<td>
-<select></select>
-</td>
-<td>هِيَ</td>
-</tr>
-<!--they 2M-->
-<tr>
-<td>
-<select></select>
-</td>
-<td>
-<select></select>
-</td>
-<td>
-<select></select>
-</td>
-<td>2M<br/> هُمَا </td>
-</tr>
-<!--they 2F-->
-<tr>
-<td>
-<select></select>
-</td>
-<td>
-<select></select>
-</td>
-<td>
-<select></select>
-</td>
-<td>2F<br/>  هُمَا</td>
-</tr>
-<!--They 3+ M-->
-<tr>
-<td>
-<select></select>
-</td>
-<td>
-<select></select>
-</td>
-<td>
-<select></select>
-</td>
-<td>هُمْ</td>
-</tr>
-<!--They 3+ F-->
-<tr>
-<td>
-<select></select>
-</td>
-<td>
-<select></select>
-</td>
-<td>
-<select></select>
-</td>
-<td>هُنَّ</td>
-</tr>
-<!--They 3+ F-->
-</table> 
+      <td>أَنَا</td>
+    </tr>
+    <!--we -->
 
-<button class="checkButton" style="border:2px solid; background-color: rgb(137, 201, 76); font-size: 30px;">Check Answer</button>
-<br /><br />
-    <script>
-      const checkButtons = document.querySelectorAll(".checkButton");
-      checkButtons.forEach(function (button) {
-        button.addEventListener("click", function () {
-          const table = button.previousElementSibling;
-          const selects = table.querySelectorAll("select");
+    <tr>
 
-          selects.forEach(function (select) {
-            const word =
-              select.parentNode.parentNode.querySelector(
-                "td:first-child"
-              ).innerText;
-            const tense = select.dataset.correct;
-            const userInput = select.value;
+      <!--for command-->
+      <td>
+        <select data-correct="--">
+          <option value="select">Select</option>
 
-            if (userInput === tense) {
-              select.classList.remove("wrong");
-              select.classList.add("correct");
-            } else {
-              select.classList.remove("correct");
-              select.classList.add("wrong");
-            }
-          });
+        </select>
+      </td>
+
+      <!--for present-->
+      <td>
+        <select data-correct="نَشْرَبُ">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+      <!-- for past-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+      <td>نَحْنُ</td>
+    </tr>
+    <!--you mascular-->
+    <tr>
+
+      <!--for command-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+
+      <!--for present-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+      <!-- for past-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+          <option value=""></option>
+        </select>
+      </td>
+      <td>أَنْتَ</td>
+    </tr>
+    <!--**************************************************************************************************-->
+    <!--you F-->
+    <tr>
+
+      <!--for command-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+
+      <!--for present-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+      <!-- for past-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+          <option value=""></option>
+        </select>
+      </td>
+      <td>أَنْتِ</td>
+    </tr>
+    <!--**************************************************************************************************-->
+    <!-- you 2M/2F-->
+    <tr>
+
+      <!--for command-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+
+      <!--for present-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+      <!-- for past-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+          <option value=""></option>
+        </select>
+      </td>
+      <td>أََنْتُمَا</td>
+    </tr>
+    <!--**************************************************************************************************-->
+    <!--you all M-->
+    <tr>
+
+      <!--for command-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+
+      <!--for present-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+      <!-- for past-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+          <option value=""></option>
+        </select>
+      </td>
+      <td>أَنْتُمْ</td>
+    </tr>
+    <!--**************************************************************************************************-->
+    <!--you all F-->
+    <tr>
+
+      <!--for command-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+
+      <!--for present-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+      <!-- for past-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+          <option value=""></option>
+        </select>
+      </td>
+      <td>أَنْتُنَّ</td>
+    </tr>
+    <!--**************************************************************************************************-->
+    <!--3rd person-->
+    <!--he-->
+    <tr>
+
+      <!--for command-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+
+      <!--for present-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+      <!-- for past-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+          <option value=""></option>
+        </select>
+      </td>
+      <td>هُوَ</td>
+    </tr>
+    <!--**************************************************************************************************-->
+    <!--She-->
+    <tr>
+
+      <!--for command-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+
+      <!--for present-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+      <!-- for past-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+          <option value=""></option>
+        </select>
+      </td>
+      <td>هِيَ</td>
+    </tr>
+    <!--**************************************************************************************************-->
+    <!--they 2M-->
+    <tr>
+
+      <!--for command-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+
+      <!--for present-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+      <!-- for past-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+          <option value=""></option>
+        </select>
+      </td>
+      <td>
+        2M<br />
+        هُمَا
+      </td>
+    </tr>
+    <!--**************************************************************************************************-->
+    <!--they 2F-->
+    <tr>
+
+      <!--for command-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+
+      <!--for present-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+      <!-- for past-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+          <option value=""></option>
+        </select>
+      </td>
+      <td>
+        2F<br />
+        هُمَا
+      </td>
+    </tr>
+    <!--**************************************************************************************************-->
+    <!--They 3+ M-->
+    <tr>
+
+      <!--for command-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+
+      <!--for present-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+      <!-- for past-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+          <option value=""></option>
+        </select>
+      </td>
+      <td>هُمْ</td>
+    </tr>
+    <!--**************************************************************************************************-->
+    <!--They 3+ F-->
+    <tr>
+
+      <!--for command-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+
+      <!--for present-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+
+        </select>
+      </td>
+      <!-- for past-->
+      <td>
+        <select data-correct="">
+          <option value="select">Select</option>
+          <option value=""></option>
+        </select>
+      </td>
+      <td>هُنَّ</td>
+    </tr>
+  </table>
+
+  <button class="checkButton" style="
+      border: 2px solid;
+      background-color: rgb(137, 201, 76);
+      font-size: 30px;
+    ">
+    Check Answer
+  </button>
+  <br /><br />
+
+
+  <script>
+    const checkButtons = document.querySelectorAll(".checkButton");
+    checkButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        const table = button.previousElementSibling;
+        const selects = table.querySelectorAll("select");
+
+        selects.forEach(function (select) {
+          const word =
+            select.parentNode.parentNode.querySelector(
+              "td:first-child"
+            ).innerText;
+          const tense = select.dataset.correct;
+          const userInput = select.value;
+
+          if (userInput === tense) {
+            select.classList.remove("wrong");
+            select.classList.add("correct");
+          } else {
+            select.classList.remove("correct");
+            select.classList.add("wrong");
+          }
         });
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
+
 </html>
