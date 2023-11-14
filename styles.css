@@ -48,18 +48,18 @@ td {
 }
 
 tr:nth-child(2) {
-    background-color: #b9c8aa;
+    background-color: grey;
   }
 
   tr:nth-child(n+3):nth-child(-n+4) {
-    background-color: #6190c2;
+    background-color: whitesmoke;
   }
 
   tr:nth-child(n+5):nth-child(-n+9)  {
-    background-color: #939b6c;
+    background-color: white;
   }
   tr:nth-child(n+10):nth-child(-n+15)  {
-    background-color: #3f5cbb;
+    background-color: #e5e8f0;
   }
 
 
@@ -69,7 +69,7 @@ tr:nth-child(2) {
     top: 0;
     width: 100%;
     z-index: 1;
-    background-color: rgb(16, 119, 78);
+    background-color: grey;
     padding: 8px 50px;
     width: 85%;
   }
@@ -110,12 +110,12 @@ tr:nth-child(2) {
 }
 
 .card-front {
-  background-color: #348481;
+  background-color: rgb(204, 195, 195);
 }
 
 .card-back {
-  background-color: #1aeb0b;
-  color: rgb(0, 0, 0);
+   background-color: #7eba7a; 
+  color: rgb(35, 34, 33); 
   transform: rotateY(180deg);
   font-size: 60px;
 }
